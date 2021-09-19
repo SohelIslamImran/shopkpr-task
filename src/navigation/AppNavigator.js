@@ -1,6 +1,7 @@
 import { Suspense, useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Sidebar from "../components/common/Sidebar";
+import LeftSidebar from "../components/common/LeftSidebar";
+import RightSidebar from "../components/common/RightSidebar";
 import Spinner from "../components/common/Spinner";
 import useEventListener from "../hooks/useEventListener";
 import ScrollToTop from "../utils/ScrollToTop";
@@ -16,7 +17,7 @@ const AppNavigator = () => {
         <Router>
             <ScrollToTop />
             <div id="app">
-                <Sidebar
+                <LeftSidebar
                     sidebarClass={sidebarActiveClass}
                     setSidebarClass={setSidebarActiveClass}
                 />
@@ -39,6 +40,7 @@ const AppNavigator = () => {
                         </Switch>
                     </div>
                 </main>
+                <RightSidebar />
             </div>
         </Router>
     );

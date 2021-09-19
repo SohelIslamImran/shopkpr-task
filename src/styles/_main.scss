@@ -6,7 +6,6 @@
 @import "common/sidebar";
 @import "common/spinner";
 
-
 $input-focus-box-shadow: none;
 $input-padding-y: $smallSize;
 $input-padding-x: $mediumSize;
@@ -32,8 +31,10 @@ $btn-border-radius: $smallestSize;
 
 #main {
     margin-left: 240px;
+    margin-right: 240px;
     @media screen and (max-width: 1199px) {
         margin-left: 0;
+        margin-right: 0;
     }
     &.layout-navbar {
         padding: 0;

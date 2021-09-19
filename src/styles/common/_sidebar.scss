@@ -1,4 +1,4 @@
-#sidebar {
+#left-sidebar {
     &.active {
         .sidebar-wrapper {
             left: 0;
@@ -15,97 +15,220 @@
     ::-webkit-scrollbar {
         width: 0px !important;
     }
-}
-.sidebar-wrapper {
-    width: 240px;
-    height: $full-vh;
-    position: fixed;
-    top: 0;
-    z-index: 1050;
-    overflow-y: auto;
-    background-color: $white;
-    bottom: 0;
-    transition: left 0.5s ease-out;
-    box-shadow: 0 0.5rem $smallSize $light;
-    .sidebar-header {
-        padding: $mediumSize $mediumSize $smallSize;
-        .logo a {
-            font-size: $fontSizeSemiMedium;
-            font-weight: $bold;
-            color: rgba(42, 40, 41, 0.9);
-        }
-    }
-    .sidebar-toggler.x {
-        position: absolute;
-        right: 0;
-        top: 0.5rem;
-        display: none;
-    }
 
-    .menu {
-        padding-left: 0;
-        margin-top: $mediumSize;
-        padding: 0 $semiMediumSize;
-        font-weight: $semiBold;
-        .sidebar-title {
-            padding: 0 $smallSize;
-            margin: $semiMediumSize 0 $smallSize;
-            list-style: none;
-            font-weight: $regular;
-            color: $gray;
+    .sidebar-wrapper {
+        width: 240px;
+        height: $full-vh;
+        position: fixed;
+        top: 0;
+        z-index: 1050;
+        overflow-y: auto;
+        background-color: $white;
+        bottom: 0;
+        transition: left 0.5s ease-out;
+        box-shadow: 0 0.5rem $smallSize $light;
+        .sidebar-header {
+            padding: $mediumSize $mediumSize $smallSize;
+            .logo a {
+                font-size: $fontSizeSemiMedium;
+                font-weight: $bold;
+                color: rgba(42, 40, 41, 0.9);
+            }
         }
-
-        .sidebar-link {
-            display: block;
-            padding: $smallSize;
-            display: flex;
-            align-items: center;
-            border-radius: 0.475rem;
-            transition: all 0.5s;
-            color: $sidebarBaseColor;
-            svg,
+        .sidebar-toggler {
+            position: absolute;
+            right: $smallSize;
+            top: $smallSize;
+            display: none;
             i {
+                font-size: $fontSizeSemiMedium;
+                &::before {
+                    font-weight: $bold !important;
+                }
+            }
+        }
+
+        .menu {
+            padding-left: 0;
+            margin-top: $mediumSize;
+            padding: 0 $semiMediumSize;
+            font-weight: $semiBold;
+            .sidebar-title {
+                padding: 0 $smallSize;
+                margin: $semiMediumSize 0 $smallSize;
+                list-style: none;
+                font-weight: $regular;
+                color: $gray;
+            }
+
+            .sidebar-link {
+                display: block;
+                padding: $smallSize;
                 display: flex;
                 align-items: center;
-                color: #7c8db5;
+                border-radius: 0.475rem;
+                transition: all 0.5s;
+                color: $sidebarBaseColor;
+                svg,
+                i {
+                    display: flex;
+                    align-items: center;
+                    color: #7c8db5;
+                }
+                span {
+                    margin-left: $smallSize;
+                    font-weight: $medium;
+                }
+                &:hover {
+                    background-color: rgb(240, 241, 245);
+                }
             }
-            span {
-                margin-left: $smallSize;
-                font-weight: $medium;
-            }
-            &:hover {
-                background-color: rgb(240, 241, 245);
-            }
-        }
 
-        .sidebar-item {
-            list-style: none;
-            margin-top: 0.5rem;
-            position: relative;
-            &.active {
-                .sidebar-link {
-                    background-color: $primary;
-                    span {
-                        color: $white;
-                    }
-                    svg,
-                    i {
-                        fill: $white;
-                        color: $white;
+            .sidebar-item {
+                list-style: none;
+                margin-top: 0.5rem;
+                position: relative;
+                &.active {
+                    .sidebar-link {
+                        background-color: $primary;
+                        span {
+                            color: $white;
+                        }
+                        svg,
+                        i {
+                            fill: $white;
+                            color: $white;
+                        }
                     }
                 }
             }
         }
     }
 }
-@media screen and (max-width: 1199px) {
+
+#right-sidebar {
+    &.active {
+        .sidebar-wrapper {
+            right: 0;
+        }
+    }
+    &:not(.active) {
+        .sidebar-wrapper {
+            right: -240px;
+        }
+        & ~ #main {
+            margin-right: 0;
+        }
+    }
+    ::-webkit-scrollbar {
+        width: 0px !important;
+    }
+
     .sidebar-wrapper {
-        position: absolute;
-        left: -240px;
-        .sidebar-toggler.x {
-            display: block;
+        width: 240px;
+        height: $full-vh;
+        position: fixed;
+        top: 0;
+        z-index: 1050;
+        overflow-y: auto;
+        background-color: $white;
+        bottom: 0;
+        transition: right 0.5s ease-out;
+        box-shadow: 0 0.5rem $smallSize $light;
+        .sidebar-header {
+            padding: $mediumSize $semiMediumSize $smallSize;
+            p {
+                font-size: $root-font-size-md;
+            }
+        }
+        .sidebar-toggler {
+            position: absolute;
+            left: $smallSize;
+            top: $smallSize;
+            display: none;
+            i {
+                font-size: $fontSizeSemiMedium;
+                &::before {
+                    font-weight: $bold !important;
+                }
+            }
+        }
+
+        .menu {
+            padding-right: 0;
+            margin-top: $mediumSize;
+            padding: 0 $semiMediumSize;
+            font-weight: $semiBold;
+            .sidebar-title {
+                padding: 0 $smallSize;
+                margin: $semiMediumSize 0 $smallSize;
+                list-style: none;
+                font-weight: $regular;
+                color: $gray;
+            }
+
+            .sidebar-link {
+                display: block;
+                padding: $smallSize;
+                display: flex;
+                align-items: center;
+                border-radius: 0.475rem;
+                transition: all 0.5s;
+                color: $sidebarBaseColor;
+                svg,
+                i {
+                    display: flex;
+                    align-items: center;
+                    color: #7c8db5;
+                }
+                span {
+                    margin-right: $smallSize;
+                    font-weight: $medium;
+                }
+                &:hover {
+                    background-color: rgb(240, 241, 245);
+                }
+            }
+
+            .sidebar-item {
+                list-style: none;
+                margin-top: 0.5rem;
+                position: relative;
+                &.active {
+                    .sidebar-link {
+                        background-color: $primary;
+                        span {
+                            color: $white;
+                        }
+                        svg,
+                        i {
+                            fill: $white;
+                            color: $white;
+                        }
+                    }
+                }
+            }
         }
     }
 }
-@media screen and (min-width: 1200px) {
+
+@media screen and (max-width: 1199px) {
+    #left-sidebar {
+        .sidebar-wrapper {
+            position: absolute;
+            left: -240px;
+            .sidebar-toggler {
+                display: block;
+            }
+        }
+    }
+    #right-sidebar {
+        .sidebar-wrapper {
+            position: absolute;
+            right: -240px;
+            .sidebar-toggler {
+                display: block;
+            }
+        }
+    }
 }

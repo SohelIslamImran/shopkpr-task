@@ -3,12 +3,12 @@ import { ReactComponent as Logo } from "../../assets/logo.svg";
 import useRouter from "../../hooks/useRouter";
 import sidebarMenus from "./sidebarMenuData";
 
-const Sidebar = ({ sidebarClass, setSidebarClass }) => {
+const LeftSidebar = ({ sidebarClass, setSidebarClass }) => {
     const { pathname } = useRouter();
     const isActive = (link) => (link === pathname ? "active" : "");
 
     return (
-        <div id="sidebar" className={sidebarClass}>
+        <div id="left-sidebar" className={sidebarClass}>
             <div className="sidebar-wrapper active">
                 <div className="sidebar-header">
                     <div className="d-flex justify-content-between">
@@ -17,10 +17,7 @@ const Sidebar = ({ sidebarClass, setSidebarClass }) => {
                                 <Logo width="140" title="Logo" />
                             </Link>
                         </div>
-                        <div
-                            className="toggler sidebar-hide d-xl-none d-block"
-                            onClick={() => setSidebarClass("")}
-                        >
+                        <div className="sidebar-toggler" onClick={() => setSidebarClass("")}>
                             <i className="bi bi-x bi-middle" />
                         </div>
                     </div>
@@ -44,12 +41,9 @@ const Sidebar = ({ sidebarClass, setSidebarClass }) => {
                         ))}
                     </ul>
                 </div>
-                <button className="sidebar-toggler btn x" type="button">
-                    <i data-feather="x" />
-                </button>
             </div>
         </div>
     );
 };
 
-export default Sidebar;
+export default LeftSidebar;
