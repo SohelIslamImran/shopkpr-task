@@ -1,0 +1,46 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
+@import "config/fonts";
+@import "config/colors";
+@import "config/sizes";
+@import "dashboard/dashboard";
+@import "common/sidebar";
+@import "common/spinner";
+
+
+$input-focus-box-shadow: none;
+$input-padding-y: $smallSize;
+$input-padding-x: $mediumSize;
+$form-label-font-weight: $bold;
+$form-label-font-size: 0.95rem;
+$form-text-color: $black;
+$input-placeholder-color: $input-solid-placeholder-color;
+$popover-border-width: 0;
+$popover-border-radius: 12px;
+$dropdown-border-width: 0;
+$dropdown-box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.1);
+$dropdown-link-hover-bg: $bgPrimaryLight;
+$dropdown-item-padding-y: $smallestSize;
+$dropdown-divider-bg: rgba(42, 40, 41, 0.1);
+$card-border-width: 0px;
+$card-cap-bg: $white;
+$link-decoration: none;
+$btn-font-family: $fontFamily;
+$btn-font-size: $smallSize;
+$btn-font-weight: $medium;
+$btn-focus-width: 0;
+$btn-border-radius: $smallestSize;
+
+#main {
+    margin-left: 240px;
+    @media screen and (max-width: 1199px) {
+        margin-left: 0;
+    }
+    &.layout-navbar {
+        padding: 0;
+    }
+    #main-content {
+        padding: $mediumSize;
+    }
+}
+
+@import "~bootstrap/scss/bootstrap";

@@ -1,0 +1,33 @@
+$primary: #116e41;
+$secondary: #ff514f;
+$white: white;
+$black: #2a2829;
+$gray: rgba(153, 153, 153, 1);
+$light: #eff9f1;
+$success: #34c159;
+$danger: #ee4023;
+$sidebarBaseColor: #25396f;
+
+$bgPrimaryGradient: linear-gradient(76.01deg, #116e41 0%, #16b96d 99.68%);
+$bgPrimaryLight: #f7f9fd;
+
+$primary: $primary;
+$secondary: $secondary;
+$light: $light;
+$success: $success;
+$danger: $danger;
+
+$theme-colors: (
+    "primary": $primary,
+    "secondary": $secondary,
+    "light": $light,
+    "success": $success,
+    "danger": $danger,
+);
+
+$input-solid-bg: #f3f6f9;
+$input-solid-bg-focus: #ecf0f3;
+$input-solid-placeholder-color: #b5b5c3;
+$input-solid-color: #464e5f;
+$link-color: inherit;
+$link-hover-color: inherit;
