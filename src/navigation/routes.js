@@ -1,12 +1,11 @@
 import { lazy } from "react";
 
-const Dashboard = lazy(() => import("../components/dashboard/Dashboard"));
+const Admin = lazy(() => import("../components/admin/Admin"));
 
 const routes = [
     {
-        path: "/",
-        exact: true,
-        component: <Dashboard />,
+        path: "/dash-board/admin",
+        component: <Admin />,
     },
 ];
 

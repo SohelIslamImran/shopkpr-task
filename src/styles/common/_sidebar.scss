@@ -114,7 +114,7 @@
     }
     &:not(.active) {
         .sidebar-wrapper {
-            right: -240px;
+            right: -260px;
         }
         & ~ #main {
             margin-right: 0;
@@ -125,7 +125,7 @@
     }
 
     .sidebar-wrapper {
-        width: 240px;
+        width: 260px;
         height: $full-vh;
         position: fixed;
         top: 0;
@@ -139,6 +139,7 @@
             padding: $mediumSize $semiMediumSize $smallSize;
             p {
                 font-size: $root-font-size-md;
+                color: $gray;
             }
         }
         .sidebar-toggler {
@@ -155,56 +156,39 @@
         }
 
         .menu {
-            padding-right: 0;
-            margin-top: $mediumSize;
             padding: 0 $semiMediumSize;
-            font-weight: $semiBold;
-            .sidebar-title {
-                padding: 0 $smallSize;
-                margin: $semiMediumSize 0 $smallSize;
-                list-style: none;
-                font-weight: $regular;
-                color: $gray;
-            }
-
-            .sidebar-link {
-                display: block;
-                padding: $smallSize;
+            li {
                 display: flex;
-                align-items: center;
-                border-radius: 0.475rem;
-                transition: all 0.5s;
-                color: $sidebarBaseColor;
-                svg,
-                i {
-                    display: flex;
-                    align-items: center;
-                    color: #7c8db5;
-                }
-                span {
-                    margin-right: $smallSize;
-                    font-weight: $medium;
-                }
-                &:hover {
-                    background-color: rgb(240, 241, 245);
-                }
-            }
-
-            .sidebar-item {
+                margin: $smallSize 0;
                 list-style: none;
-                margin-top: 0.5rem;
-                position: relative;
+                transition: all 0.5s;
+
+                h3 {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 50px;
+                    height: 50px;
+                    color: $white;
+                    background-color: $primaryLight;
+                    border-radius: 0.475rem;
+                    margin-bottom: 0;
+                    margin-right: $smallestSize;
+                    transition: all 0.5s;
+                }
+                div {
+                    p {
+                        font-size: $root-font-size-md;
+                        margin-bottom: 0;
+                        color: $gray;
+                    }
+                    h5 {
+                        text-transform: uppercase;
+                    }
+                }
                 &.active {
-                    .sidebar-link {
-                        background-color: $primary;
-                        span {
-                            color: $white;
-                        }
-                        svg,
-                        i {
-                            fill: $white;
-                            color: $white;
-                        }
+                    h3 {
+                        background-color: $secondary;
                     }
                 }
             }
@@ -225,7 +209,7 @@
     #right-sidebar {
         .sidebar-wrapper {
             position: absolute;
-            right: -240px;
+            right: -260px;
             .sidebar-toggler {
                 display: block;
             }

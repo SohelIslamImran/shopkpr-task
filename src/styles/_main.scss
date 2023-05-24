@@ -2,7 +2,7 @@
 @import "config/fonts";
 @import "config/colors";
 @import "config/sizes";
-@import "dashboard/dashboard";
+@import "admin/admin";
 @import "common/sidebar";
 @import "common/spinner";
 
@@ -13,25 +13,18 @@ $form-label-font-weight: $bold;
 $form-label-font-size: 0.95rem;
 $form-text-color: $black;
 $input-placeholder-color: $input-solid-placeholder-color;
-$popover-border-width: 0;
-$popover-border-radius: 12px;
-$dropdown-border-width: 0;
-$dropdown-box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.1);
-$dropdown-link-hover-bg: $bgPrimaryLight;
-$dropdown-item-padding-y: $smallestSize;
-$dropdown-divider-bg: rgba(42, 40, 41, 0.1);
-$card-border-width: 0px;
-$card-cap-bg: $white;
 $link-decoration: none;
 $btn-font-family: $fontFamily;
 $btn-font-size: $smallSize;
 $btn-font-weight: $medium;
 $btn-focus-width: 0;
 $btn-border-radius: $smallestSize;
+$btn-padding-y: $smallSize - 0.1rem;
+$btn-padding-x: $mediumSize;
 
 #main {
     margin-left: 240px;
-    margin-right: 240px;
+    margin-right: 260px;
     @media screen and (max-width: 1199px) {
         margin-left: 0;
         margin-right: 0;

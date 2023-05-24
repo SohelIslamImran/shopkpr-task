@@ -10,19 +10,19 @@ const sidebarMenus = [
     {
         id: 2,
         sidebarItem: "Products",
-        link: "/products",
+        link: "/dash-board/products",
         icon: "bi bi-heart-fill",
     },
     {
         id: 3,
         sidebarItem: "Settings",
-        link: "/settings",
+        link: "/dash-board/settings",
         icon: "bi bi-gear",
     },
     {
         id: 4,
         sidebarItem: "Helps",
-        link: "/helps",
+        link: "/dash-board/helps",
         icon: "bi bi-question-circle",
     },
 ];

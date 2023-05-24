@@ -1,0 +1,16 @@
+.admin {
+    div.header {
+        nav {
+            color: $primaryLight;
+            font-size: $fontSizeSemiMedium;
+        }
+        p {
+            color: $gray;
+        }
+        .btn {
+             i {
+                 margin-right: $smallestSize;
+             }
+        }
+    }
+}
